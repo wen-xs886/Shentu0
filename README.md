@@ -23,7 +23,7 @@
 
 ## 项目链接
 - 微信小程序预览地址：![ou7MH7ijLGF0tsFF9NwtxXzmonT0](https://github.com/user-attachments/assets/61eb3547-2c6f-4330-8ac3-7890e6c073b1)
-- GitHub 项目仓库：https://github.com/wen-xs886/Shentu0.git
+- GitHub 项目仓库：https://github.com/wen-xs886/chatbot-Diezha.git
 
 ## 智能体设定摘要
 - 角色：兰斩 / 请蓉
