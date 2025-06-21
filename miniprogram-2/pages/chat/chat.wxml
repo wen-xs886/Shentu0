@@ -2,6 +2,9 @@
   <view class="header">
     <image class="avatar" src="{{roleAvatar}}" bindtap="showRoleInfo"/>
     <text class="name">{{role==='sikoulan'?'兰斩':'清蓉'}}</text>
+    <view class="export-btn" bindtap="exportChatRecord">
+      <text class="export-text">导出</text>
+    </view>
   </view>
   <scroll-view class="chat-list" scroll-y="true" scroll-into-view="{{scrollToView}}">
     <block wx:for="{{messages}}" wx:key="index">

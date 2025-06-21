@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   padding: 20rpx;
+  position: relative;
 }
 .avatar {
   width: 80rpx;
@@ -36,6 +37,8 @@
 .name {
   font-size: 32rpx;
   color: #5a3a29;
+  margin-left: 20rpx;
+  flex: 1;
 }
 .chat-list {
   height: 70vh;
@@ -175,4 +178,37 @@
 
 .close-btn:active {
   background: rgba(212, 165, 116, 1);
+}
+
+.export-btn {
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80rpx;
+  height: 60rpx;
+  background: rgba(212, 165, 116, 0.8);
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.15);
+}
+
+.export-btn:active {
+  background: rgba(212, 165, 116, 1);
+  transform: translateY(-50%) scale(0.95);
+}
+
+.export-text {
+  font-size: 24rpx;
+  color: #5a3a29;
+  font-weight: bold;
+}
+
+.export-icon {
+  font-size: 28rpx;
+  color: #5a3a29;
 } 
