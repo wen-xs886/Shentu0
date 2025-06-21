@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container" style="background-image:url('/images/bg.jpg')"
+      bindtouchstart="onTouchStart"
+      bindtouchend="onTouchEnd">
+  <image class="role {{selected==='sikoulan'?'selected':'unselected'}}"
+         src="/images/sikoulan.png"
+         bindtap="selectRole"
+         data-role="sikoulan"/>
+  <image class="role {{selected==='shentujuqing'?'selected':'unselected'}}"
+         src="/images/shentujuqing.png"
+         bindtap="selectRole"
+         data-role="shentujuqing"/>
+  <view wx:if="{{selected}}">
+    <view class="intro {{selected}}">
+      <text wx:if="{{selected==='sikoulan'}}">{
+        {'兰'}<br/>{'斩'}<br/>{'：'}<br/>{'流'}<br/>{'浪'}<br/>{'江'}<br/>{'湖'}<br/>{'，'}<br/>{'执'}<br/>{'笔'}<br/>{'如'}<br/>{'执'}<br/>{'刀'}
+      }</text>
+      <text wx:if="{{selected==='shentujuqing'}}">{
+        {'清'}<br/>{'蓉'}<br/>{'：'}<br/>{'执'}<br/>{'棋'}<br/>{'观'}<br/>{'星'}<br/>{'，'}<br/>{'点'}<br/>{'墨'}<br/>{'话'}<br/>{'春'}<br/>{'风'}
+      }</text>
+    </view>
+  </view>
+  <view class="tip">选择完成后上滑开始聊天</view>
+</view>

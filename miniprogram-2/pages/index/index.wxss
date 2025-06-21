@@ -1,0 +1,125 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  width: 80%;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+
+.nickname-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  border-top: .5px solid rgba(0, 0, 0, 0.1);
+  border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.nickname-label {
+  width: 105px;
+}
+
+.nickname-input {
+  flex: 1;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+}
+
+/* 角色图片的基础样式，绝对定位，带过渡动画 */
+.role {
+  position: absolute;
+  transition: all 0.5s;
+}
+
+/* 被选中的角色图片样式 */
+.role.selected {
+  z-index: 2;
+  left: 50vw;
+  top: 30vh;
+  width: 40vw;
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1.5);
+}
+
+/* 未被选中的角色图片样式 */
+.role.unselected {
+  z-index: 1;
+  left: 10vw;
+  top: 40vh;
+  width: 20vw;
+  opacity: 0.5;
+  transform: scale(1);
+}
+
+/* 未被选中的申屠玖清角色图片，靠右显示 */
+.role.unselected[data-role="shentujuqing"] {
+  left: 70vw;
+}
+
+.intro {
+  position: absolute;
+  top: 30vh;
+  right: 10vw;
+  font-size: 20px;
+  color: #5a3a29;
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  padding: 20px;
+  writing-mode: vertical-rl;
+  text-align: center;
+}
+.intro.shentujuqing {
+  left: 10vw;
+  right: auto;
+}
+.tip {
+  position: absolute;
+  bottom: 10vh;
+  width: 100vw;
+  text-align: center;
+  color: #5a3a29;
+  font-size: 18px;
+}

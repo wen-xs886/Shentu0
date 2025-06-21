@@ -1,0 +1,36 @@
+<view class="container" style="background: linear-gradient(135deg, #FFF9E3 0%, #FFE4B5 100%);" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
+  <view class="background-circle {{circleExpanding ? 'expand' : ''}}"></view>
+  
+  <!-- 司寇兰角色 -->
+  <image class="role {{!hasChosen ? 'init left' : (selected==='sikoulan' ? 'selected' : 'unselected-move left')}}"
+         src="/images/sikoulan.png"
+         mode="aspectFit"
+         bindtap="selectRole"
+         data-role="sikoulan"
+         style="width: 800rpx; height: 800rpx;"/>
+  
+  <!-- 申屠玖清角色 -->
+  <image class="role {{!hasChosen ? 'init right' : (selected==='shentujuqing' ? 'selected' : 'unselected-move right')}}"
+         src="/images/shentujuqing.png"
+         mode="aspectFit"
+         bindtap="selectRole"
+         data-role="shentujuqing"
+         style="width: 800rpx; height: 800rpx;"/>
+  
+  <!-- 提示小字 -->
+  <view wx:if="{{!hasChosen}}" class="sub-tip">点击选择书信对象</view>
+  
+  <!-- 角色介绍文本 -->
+  <view wx:if="{{showIntro}}" class="intro {{selected==='sikoulan'?'left-intro':'right-intro'}}" key="{{selected}}">
+    <view wx:if="{{selected==='sikoulan'}}">
+      <view>【兰斩】</view>
+      <view>流浪江湖，执笔如执刀</view>
+    </view>
+    <view wx:if="{{selected==='shentujuqing'}}">
+      <view>【清蓉】</view>
+      <view>执棋观星，点墨话春风</view>
+    </view>
+  </view>
+  
+  <view class="tip">选择完成后上滑开始聊天</view>
+</view> 

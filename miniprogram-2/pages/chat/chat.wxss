@@ -1,0 +1,178 @@
+.chat-bg {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3rpx solid #d4a574;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #FFF9E3 0%, #FFE4B5 100%);
+  padding: 2rpx;
+}
+.msg.bot .avatar {
+  margin-right: 20rpx;
+  border: 3rpx solid #d4a574;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #FFF9E3 0%, #FFE4B5 100%);
+  padding: 2rpx;
+}
+.msg.user .avatar {
+  margin-left: 20rpx;
+  border: 3rpx solid #8B7355;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #F5E6D8 0%, #E6D3C1 100%);
+  padding: 2rpx;
+}
+.name {
+  font-size: 32rpx;
+  color: #5a3a29;
+}
+.chat-list {
+  height: 70vh;
+  padding: 20rpx;
+  overflow-y: scroll;
+}
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20rpx;
+}
+.msg.bot {
+  flex-direction: row;
+}
+.msg.user {
+  flex-direction: row-reverse;
+}
+.content {
+  max-width: 60vw;
+  background: #fffbe6;
+  border-radius: 20rpx;
+  padding: 16rpx;
+  margin: 0 10rpx;
+  color: #5a3a29;
+}
+.input-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  padding: 10rpx;
+  background: rgba(255,255,255,0.8);
+}
+.input {
+  flex: 1;
+  border: none;
+  background: #f5e6d8;
+  border-radius: 20rpx;
+  padding: 10rpx;
+  margin-right: 10rpx;
+}
+.send-btn {
+  background: #5a3a29;
+  color: white;
+  border: none;
+  border-radius: 20rpx;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+}
+
+/* 角色简介弹窗样式 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-modal {
+  background: linear-gradient(135deg, #FFF9E3 0%, #FFE4B5 100%);
+  border-radius: 20rpx;
+  padding: 40rpx;
+  width: 80vw;
+  max-width: 600rpx;
+  position: relative;
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.3);
+  border: 2rpx solid #d4a574;
+}
+
+.role-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.role-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #d4a574;
+  margin-bottom: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.2);
+}
+
+.role-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  width: 100%;
+}
+
+.role-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5a3a29;
+  margin-bottom: 10rpx;
+}
+
+.role-real-name,
+.role-profession,
+.role-specialty {
+  font-size: 28rpx;
+  color: #5a3a29;
+  line-height: 1.5;
+  text-align: left;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid rgba(212, 165, 116, 0.3);
+}
+
+.role-specialty {
+  border-bottom: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: rgba(212, 165, 116, 0.8);
+  color: #5a3a29;
+  font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-btn:active {
+  background: rgba(212, 165, 116, 1);
+} 

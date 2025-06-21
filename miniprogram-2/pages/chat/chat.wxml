@@ -1,0 +1,35 @@
+<view class="chat-bg" style="background: linear-gradient(135deg, #FFF9E3 0%, #FFE4B5 100%);">
+  <view class="header">
+    <image class="avatar" src="{{roleAvatar}}" bindtap="showRoleInfo"/>
+    <text class="name">{{role==='sikoulan'?'兰斩':'清蓉'}}</text>
+  </view>
+  <scroll-view class="chat-list" scroll-y="true" scroll-into-view="{{scrollToView}}">
+    <block wx:for="{{messages}}" wx:key="index">
+      <view class="msg {{item.from}}">
+        <image wx:if="{{item.from==='bot'}}" class="avatar" src="{{roleAvatar}}"/>
+        <text class="content">{{item.content}}</text>
+      </view>
+    </block>
+    <view id="msg-bottom"></view>
+  </scroll-view>
+  <view class="input-bar">
+    <input class="input" value="{{input}}" bindinput="onInput" placeholder="请输入消息..."/>
+    <button class="send-btn" bindtap="sendMsg" disabled="{{loading}}">发送</button>
+  </view>
+  
+  <!-- 角色简介弹窗 -->
+  <view wx:if="{{showRoleModal}}" class="modal-overlay" bindtap="hideRoleInfo">
+    <view class="role-modal" catchtap="stopPropagation">
+      <view class="role-info">
+        <image class="role-avatar" src="{{roleAvatar}}"/>
+        <view class="role-details">
+          <text class="role-name">{{role==='sikoulan'?'兰斩':'清蓉'}}</text>
+          <text class="role-real-name">{{role==='sikoulan'?'本名：司寇兰，字乐兰':'本名：申屠久清，字鸣雅'}}</text>
+          <text class="role-profession">{{role==='sikoulan'?'职业：刀客、画师':'职业：国师、诗人'}}</text>
+          <text class="role-specialty">{{role==='sikoulan'?'简介：刀法精湛，画技超群，性格直率豪爽':'简介：精通占卜，诗词造诣深厚，性格温和有礼'}}</text>
+        </view>
+      </view>
+      <view class="close-btn" bindtap="hideRoleInfo">×</view>
+    </view>
+  </view>
+</view> 
